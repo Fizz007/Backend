@@ -128,3 +128,90 @@ const PORT = 5500;
 app.listen(PORT, () => {
   console.log(`Express ruuning at ${PORT}`);
 });
+
+
+
+// const express = require('express');
+// const app = express();
+// app.use(express.json())
+
+// const PORT = 7200;
+// app.listen((PORT), ()=> {
+//     console.log(`sever is running on ${PORT}`)
+// })
+
+// const prod = [
+
+//     {
+//         id:1,
+//         name:"Faisal",
+//         color:"white",
+//     },
+//     {
+//         id:2,
+//         name:"Monish",
+//         color:"black",
+//     },
+// ];
+
+// app.get('/', (req,res)=> {
+//     console.log(req.query)
+   
+//     res.send("hello world")
+// })
+// // app.get('/prod', (req,res)=> {
+   
+// //     res.send(prod)
+// // })
+
+// app.get('/prod/:id', (req,res)=> {
+   
+//     const pro = prod.find((elem)=> elem.id === Number(req.params.id))
+//      if(!pro){
+//         res.send("notfound")
+//      }else{
+//          res.send(pro)
+//      }
+// })
+
+// app.get('/prod', (req,res)=> {
+ 
+//     const {name, color} = req.query;
+  
+//     console.log(req.query)
+//     if(name){
+//         const filt = prod.filter((elem)=> elem.name === name)
+    
+//         res.send(filt)
+//     }
+//     else if(color){
+//         const filt = prod.filter((elem)=> elem.color === color)
+//         res.send(filt)
+//     }else{
+//         res.send(prod)
+//     }
+// })
+
+// app.post('/prod', (req,res)=> {
+  
+//         // console.log('body', req.body)
+//         prod.push(req.body)
+//         res.send(prod)
+    
+// })
+
+// app.put('/prod/:id',(req,res)=> {
+//     const elem = prod.findIndex((elem,i)=> elem.id === Number(req.params.id))
+//     console.log('body', req.body)
+//     prod[elem] = req.body;
+//     res.send(prod)
+// })
+
+
+// app.delete('/prod/:id', (req,res)=> {
+//     const elem = prod.findIndex((val,i)=> val.id === Number(req.params.id))
+
+//     // const index = prod.indexOf(elem);
+//     prod.splice(elem,1)
+//     res.send(prod)
+// })
